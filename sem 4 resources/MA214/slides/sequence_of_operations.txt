@@ -1,0 +1,21 @@
+shri ganeshaya namah
+With regards to tutorial 1 question 9, we had to evaluate an expression of the form:
+
+
+a-b+c+d where a,b,c,d are all positive. 
+
+
+So if nothing is specified the default order to be used for evaluation is :
+
+
+(a+(-b+(c+d)))
+
+
+In general also, The order is from right to left. If the function is a sum of the terms like
+5 sin(x)²x³
+
+then we compute
+
+5(sin(x)[sin(x)(x[x *x])]).
+
+The addition is also from right to left. Add the two right-most terms, add the third one to this sum, and so on.
