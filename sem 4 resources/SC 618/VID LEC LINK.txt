@@ -1,1 +1,18 @@
+SHRI GANESHAYA NAMAH
+
 https://drive.google.com/drive/folders/14XiCzD-AAhMm7Y_e57ncSyAIGHN7xCbC
+
+
+
+Our coverage so far (till February 8th, 2022): 1. Representations of rotations - the group of rotations, Euler angles, the gimbal lock, quaternions, parametrised curves on the rotation group to depict a rotational manoeuvre, properties of rotational matrix, skew-symmetric matrices, the cross-product in \R^3 and the angular velocity. 2. The Euler equations of motion for a rotating rigid body; the stability properties of a spinning rigid body; the Energy-Casimir technique to determine stability; the spectral method to determine stability; an introduction to CMGs and their role in control of satellites and spacecraft 3. A gentle introduction to basic notions in differential geometry. 4. Holonomic and nonholonomic constraints in a mechanical system; the rolling wheel; the derivation of the Lagrange D'Alembert equations of motion. And plenty of videos to watch and excite your imagination ....
+
+
+In the video lectures folder on my Google Drive, please follow the following sequence for the Euler-Lagrange folder: Sequence:
+Newtonian and Lagrangian mechanics 1
+Newtonian and  Lagrangian mechanics 2
+Motivating EL equations on manifolds-1
+Motivating EL equations on manifolds-2
+Manifolds_submersions_immersions
+Manifolds_basic definitions_S1
+SO(3)-SE(3)-S2
+EL equations on S2
