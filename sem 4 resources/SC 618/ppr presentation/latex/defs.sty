@@ -1,0 +1,138 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Set spacing between paragraphs:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setlength{\parskip}{2mm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Allow displayed equations to break at pagebreaks:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\allowdisplaybreaks
+
+%% Special fonts
+\DeclareFontFamily{T1}{pzc}{}
+\DeclareFontShape{T1}{pzc}{m}{it}{<-> [1.2] pzcmi8t}{}
+\DeclareMathAlphabet{\mathpzc}{T1}{pzc}{m}{it}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Standard packages:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%    For use when working on individual chapters
+%\includeonly{}
+
+%\usepackage{amsmath, amssymb}
+%\usepackage{bm}
+\usepackage[usenames, dvipsnames]{color}
+
+\usepackage{enumitem}
+\setlist[enumerate, 1]{topsep=-0.5ex, parsep=0.5ex}
+\setlist[itemize, 1]{topsep=-0.5ex, parsep=0.5ex}
+%\usepackage{latexsym}
+%\usepackage{pbsi}
+\usepackage[colorlinks=true,
+        raiselinks=true,
+        linkcolor=Sepia,
+        citecolor=MidnightBlue,
+        urlcolor=ForestGreen,
+        pdfauthor={author},
+		pdftitle={title},
+        pdfkeywords={none},
+        pdfsubject={notes},
+        plainpages=false]{hyperref}
+
+\usepackage{braket}
+\usepackage{tikz-cd}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{cd}
+\tikzset{%
+	commutative diagrams/.cd,
+	arrow style=tikz,
+	diagrams={>=latex}
+}
+
+\usepackage{framed}
+\usepackage[framemethod=default, skipabove=1ex]{mdframed}
+\newmdenv[hidealllines=true, backgroundcolor=AntiqueWhite, frametitle={\bsifamily Scratchpad:}, frametitlebackgroundcolor=Apricot]{scratchpad}
+
+%%%% Newtx options:
+	\usepackage[theoremfont]{newtxtext}
+	\usepackage[T1]{fontenc}
+	\usepackage[varg, bigdelims, vvarbb]{newtxmath}
+	\usepackage{BOONDOX-calo}
+
+\usepackage{mathtools}
+\mathtoolsset{mathic=true}
+
+\usepackage{centernot}
+
+\usepackage{empheq}
+\usepackage[most]{tcolorbox}
+
+\newtcbox{\dcmath}[1][]{%
+    nobeforeafter, math upper, tcbox raise base, enhanced, colframe=blue!10!black, colback=blue!10, boxrule=1pt,
+    #1
+}
+
+\usepackage[british]{datetime2}
+\usepackage[textwidth=1in, textsize=small]{todonotes}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Theorem Styles:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newtheoremstyle{nonumt}{8pt}{4pt}{\itshape}{}{\scshape}{.}{ }{\thmname{#1}\thmnote{ (\mdseries #3)}}
+\theoremstyle{nonumt}
+\newtheorem{theoremnn}{Theorem}
+\newtheorem{lemmann}{Lemma}
+\newtheorem{corollarynn}{Corollary}
+\newtheorem{propositionnn}{Proposition}
+
+\newtheoremstyle{nonum}{8pt}{4pt}{}{}{\scshape}{.}{ }{\thmname{#1}\thmnote{ (\mdseries #3)}}
+\theoremstyle{nonum}
+\newtheorem{definitionnn}{Definition}
+\newtheorem{remarknn}{Remark}
+\newtheorem{remarksnn}{Remarks}
+\newtheorem{examplenn}{Example}
+\newtheorem{examplesnn}{Examples}
+\newtheorem{assumptionnn}{Assumption}
+
+\swapnumbers
+
+\newtheoremstyle{dcthm}{8pt}{4pt}{\itshape}{}{\scshape}{.}{ }{\thmname{#1}\thmnote{ (\mdseries #3)}}
+\theoremstyle{dcthm}
+\newtheorem{theorem}[equation]{Theorem}
+\newtheorem{lemma}[equation]{Lemma}
+\newtheorem{proposition}[equation]{Proposition}
+\newtheorem{corollary}[equation]{Corollary}
+
+\newtheoremstyle{dcdef}{8pt}{4pt}{}{}{\scshape}{.}{ }{\thmname{#1}\thmnote{ (\mdseries #3)}}
+\theoremstyle{dcdef}
+\newtheorem{definition}[equation]{Definition}
+\newtheorem{assumption}[equation]{Assumption}
+\newtheorem{example}[equation]{Example}
+\newtheorem{examples}[equation]{Examples}
+\newtheorem{xca}[equation]{Exercise}
+\newtheorem{exercise}[equation]{Exercise}
+\newtheorem{remark}[equation]{Remark}
+\newtheorem{remarks}[equation]{Remarks}
+\newtheoremstyle{dcprgr}{8pt}{4pt}{}{}{\itshape}{.}{ }{\thmname{#1}\thmnote{ (\mdseries #3)}}
+\theoremstyle{dcprgr}
+\newtheorem{prgr}[equation]{}
+
+%% Delimiters of remarks, examples, definitions, assumptions:
+\newcommand{\RemarkEnd}{\hspace{\stretch{1}}{$\vartriangleleft$}}
+\newcommand{\ExampleEnd}{\hspace{\stretch{1}}{$\triangle$}}
+\newcommand{\DefEnd}{\hspace{\stretch{1}}{$\Diamond$}}
+\newcommand{\AssumptionEnd}{\hspace{\stretch{1}}{$\diamondsuit$}}
+
+%% Numbering the sections and equations according to chapters:
+\numberwithin{equation}{section}
+
+%% Change the default section notation:
+\renewcommand{\sectionname}{\S\!}
+\renewcommand{\subsectionname}{\S\!}
+\renewcommand{\subsubsectionname}{\S\!}
+
+\def\independenT#1#2{\mathrel{\rlap{$#1#2$}\:\mkern2mu{#1#2}}}
+
+
+
